@@ -1,0 +1,27 @@
+\pagenumbering{gobble}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage[left=.3in, right=.3in, top=.3in, bottom=.3in]{geometry}
+\usepackage{ragged2e}
+
+\usepackage{fontspec}
+\setmainfont[ItalicFont={Helvetica Neue Italic}, BoldItalicFont={Helvetica Neue Bold Italic}]{Tahoma}
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+\usepackage{csquotes}
+\usepackage{amsthm, amsmath, amssymb} % Mathematical typesetting
+\usepackage[final, colorlinks = true, linkcolor = black, citecolor = black, urlcolor = black]{hyperref} % For hyperlinks in the PDF
+
+\usepackage{tabularx}
+\newcolumntype{R}{>{\hsize=.425\hsize \linewidth=\hsize \raggedleft \arraybackslash} X}
+\newcolumntype{L}{>{\hsize=1.575\hsize \linewidth=\hsize \raggedright \arraybackslash} X}
+\newcolumntype{Y}{>{\hsize=1.7\hsize \linewidth=\hsize \raggedright \arraybackslash} X}
+\newcolumntype{Z}{>{\hsize=.3\hsize \linewidth=\hsize \raggedright \arraybackslash} X}
+\newcolumntype{r}{>{\hsize=1.45\hsize \linewidth=\hsize \raggedright \arraybackslash} X}
+\newcolumntype{l}{>{\hsize=.55\hsize \linewidth=\hsize \raggedright \arraybackslash} X}
+
+\usepackage[backend=biber, url=false, style=nature, sorting=none, maxbibnames=99]{biblatex}
+\bibliography{pubs}

@@ -1,0 +1,40 @@
+\newcommand{\tabitem}{ \textbullet \, }
+
+\newcommand{\myRule}[1][\medskipamount]{
+    \par
+        \vspace*{\dimexpr-\parskip-\baselineskip+#1}
+        \noindent \rule{\linewidth}{1pt}
+    \par
+        \vspace*{\dimexpr-\parskip-.5\baselineskip+#1}
+}
+
+
+% Command to make name bold in publication list
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
