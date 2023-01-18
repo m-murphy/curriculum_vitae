@@ -1,1 +1,1 @@
-# [Curriculum Vitae](https://github.com/m-murphy/curriculum_vitae/raw/master/out/main.pdf)
+# [Curriculum Vitae](https://github.com/m-murphy/curriculum_vitae/raw/master/main.pdf)
